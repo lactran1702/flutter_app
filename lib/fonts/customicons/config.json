@@ -1,0 +1,40 @@
+{
+  "name": "CustomIcons",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "a42f298da5c64e646a5d532724cd6e15",
+      "css": "home-outline",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "4030ba7762283cc2edebc1578ab2fdf2",
+      "css": "people_outline",
+      "code": 59392,
+      "src": "material"
+    },
+    {
+      "uid": "9b2647e786be647c268928e9394d0213",
+      "css": "screen",
+      "code": 59449,
+      "src": "linearicons"
+    },
+    {
+      "uid": "8d40bca7a7f11091ca865e07535fcc47",
+      "css": "group-circled",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "62044d17f75c72656f1757f13b752432",
+      "css": "notifications_none",
+      "code": 59395,
+      "src": "material"
+    }
+  ]
+}
