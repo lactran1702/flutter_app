@@ -11,7 +11,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        buttonTheme: ButtonThemeData(
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          padding: EdgeInsets.zero,
+          minWidth: 20.0,
+          // color: Colors.transparent,
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          // focusColor:
+
+          // splashColor: Colors.transparent,
+          // highlightColor: Colors.transparent,
+        ),
+      ),
       // navigatorKey: MyAppKeys.navigatorKey,
       home: HomeScreen(),
       initialRoute: '/login_screen',
