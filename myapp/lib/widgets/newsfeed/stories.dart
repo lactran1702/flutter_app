@@ -63,7 +63,9 @@ class _StoryWidgetState extends State<StoryWidget> {
                           color: DefaultTheme.blue,
                         ),
                       ),
-                      onPressed: () => {},
+                      onPressed: () => {
+                        print('Add new story'),
+                      },
                     ),
                   ],
                 ),
