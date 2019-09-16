@@ -62,7 +62,6 @@ class FriendStoryHolder extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             _storyPost,
-            // _storyShadow,
             StoryShadow(),
             _friendName,
             _storyAvatar,

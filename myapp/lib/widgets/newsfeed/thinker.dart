@@ -9,129 +9,101 @@ class PostThinker extends StatefulWidget {
 class _PostThinkerState extends State<PostThinker> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.all(10),
-          child: Row(
-            children: <Widget>[
-              CircleAvatar(
-                backgroundImage: AssetImage('./assets/Images/user.jpg'),
-                radius: 40,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                'What is going on?',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: DefaultTheme.grey400,
-                ),
-              ),
-            ],
+    Widget postContent = Container(
+      padding: EdgeInsets.all(10),
+      child: Row(
+        children: <Widget>[
+          CircleAvatar(
+            backgroundImage: AssetImage('./assets/Images/user.jpg'),
+            radius: 35,
           ),
-        ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 5),
+          SizedBox(
+            width: 10,
+          ),
+          Text(
+            'What is going on?',
+            style: TextStyle(
+              fontSize: 18,
+              color: DefaultTheme.grey400,
+            ),
+          ),
+        ],
+      ),
+    );
+
+    Expanded iconHolder(
+      IconData icon,
+      Color borderColor,
+      Color color,
+      String label,
+    ) {
+      return Expanded(
+        child: Container(
           decoration: BoxDecoration(
             border: Border(
-              top: BorderSide(
+              right: BorderSide(
                 width: 1,
-                color: DefaultTheme.grey400,
+                color: borderColor,
               ),
             ),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 1,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.live_tv,
-                        color: Colors.red,
-                        size: 24,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Live',
-                      ),
-                    ],
-                  ),
-                ),
+              Icon(
+                icon,
+                color: color,
+                size: 24,
               ),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 1,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.file_upload,
-                        color: Colors.green,
-                        size: 24,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Picture',
-                      ),
-                    ],
-                  ),
-                ),
+              SizedBox(
+                width: 5,
               ),
-              Expanded(
-                child: Container(
-                  // decoration: BoxDecoration(
-                  //   border: Border(
-                  //     right: BorderSide(
-                  //       width: 1,
-                  //       color: Colors.black,
-                  //     ),
-                  //   ),
-                  // ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.pin_drop,
-                        color: Colors.pink,
-                        size: 24,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Check in',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Text(label),
             ],
           ),
         ),
+      );
+    }
+
+    Widget postButtonWrap = Container(
+      padding: EdgeInsets.symmetric(vertical: 5),
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            width: 1,
+            color: DefaultTheme.grey400,
+          ),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          iconHolder(
+            Icons.live_tv,
+            Colors.black26,
+            Colors.red,
+            'Live',
+          ),
+          iconHolder(
+            Icons.file_upload,
+            Colors.black26,
+            Colors.green,
+            'Picture',
+          ),
+          iconHolder(
+            Icons.pin_drop,
+            Colors.transparent,
+            Colors.pink,
+            'Check in',
+          ),
+        ],
+      ),
+    );
+
+    return Column(
+      children: <Widget>[
+        postContent,
+        postButtonWrap,
       ],
     );
   }
