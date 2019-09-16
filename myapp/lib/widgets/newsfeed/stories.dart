@@ -21,7 +21,15 @@ class _StoryWidgetState extends State<StoryWidget> {
           scrollDirection: Axis.horizontal,
           children: <Widget>[
             UserStoryHolder(),
-            FriendStoryHolder(),
+            FriendStoryHolder(
+              {
+                "name": "User A",
+                "avatar": "./assets/Images/banner.jpg",
+              },
+            ),
+            // FriendStoryHolder(),
+            // FriendStoryHolder(),
+            // FriendStoryHolder(),
           ],
         ),
       ),
