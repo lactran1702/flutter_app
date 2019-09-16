@@ -18,7 +18,7 @@ class FriendStoryHolder extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.asset(
-                  './assets/Images/user2.jpg',
+                  './assets/Images/banner.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
