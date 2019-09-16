@@ -103,14 +103,14 @@ class _PostThinkerState extends State<PostThinker> {
               ),
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        width: 1,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
+                  // decoration: BoxDecoration(
+                  //   border: Border(
+                  //     right: BorderSide(
+                  //       width: 1,
+                  //       color: Colors.black,
+                  //     ),
+                  //   ),
+                  // ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
