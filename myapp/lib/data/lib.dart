@@ -24,3 +24,4 @@ export 'package:myapp/widgets/newsfeed/thinker.dart';
 export 'package:myapp/widgets/newsfeed/stories.dart';
 export 'package:myapp/widgets/newsfeed/story/user_story_holder.dart';
 export 'package:myapp/widgets/newsfeed/story/friend_story_holder.dart';
+export 'package:myapp/widgets/newsfeed/story/story_shadow.dart';

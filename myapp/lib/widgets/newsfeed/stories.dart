@@ -17,19 +17,31 @@ class _StoryWidgetState extends State<StoryWidget> {
         padding: EdgeInsets.symmetric(vertical: 10),
         height: 250,
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: EdgeInsets.only(left: 10, right: 5),
           scrollDirection: Axis.horizontal,
           children: <Widget>[
             UserStoryHolder(),
             FriendStoryHolder(
               {
                 "name": "User A",
-                "avatar": "./assets/Images/banner.jpg",
+                "avatar": "./assets/Images/user2.jpg",
               },
+              storyImg: "./assets/Images/banner.jpg",
             ),
-            // FriendStoryHolder(),
-            // FriendStoryHolder(),
-            // FriendStoryHolder(),
+            FriendStoryHolder(
+              {
+                "name": "User B",
+                "avatar": "./assets/Images/user3.jpg",
+              },
+              storyImg: "./assets/Images/user3.jpg",
+            ),
+            FriendStoryHolder(
+              {
+                "name": "User C",
+                "avatar": "./assets/Images/user4.jpg",
+              },
+              storyImg: "./assets/Images/user4.jpg",
+            ),
           ],
         ),
       ),

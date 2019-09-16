@@ -4,11 +4,11 @@ class FriendStoryHolder extends StatelessWidget {
   final String storyImg;
   final dynamic friendInfo;
 
-  // final String
-
-  const FriendStoryHolder(this.friendInfo,
-      {Key key, this.storyImg = './assets/Images/banner.jpg'})
-      : super(key: key);
+  const FriendStoryHolder(
+    this.friendInfo, {
+    Key key,
+    this.storyImg = './assets/Images/banner.jpg',
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +20,6 @@ class FriendStoryHolder extends StatelessWidget {
         child: Image.asset(
           storyImg,
           fit: BoxFit.cover,
-        ),
-      ),
-    );
-
-    Widget _storyShadow = Positioned(
-      bottom: 0,
-      left: 0,
-      right: 0,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
-        child: Container(
-          height: 60,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              stops: [0, 1],
-              colors: [
-                Colors.black.withOpacity(0.8),
-                Colors.transparent,
-              ],
-            ),
-          ),
         ),
       ),
     );
@@ -85,7 +62,8 @@ class FriendStoryHolder extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             _storyPost,
-            _storyShadow,
+            // _storyShadow,
+            StoryShadow(),
             _friendName,
             _storyAvatar,
           ],
