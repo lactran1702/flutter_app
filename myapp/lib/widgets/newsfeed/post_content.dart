@@ -15,7 +15,7 @@ class _PostContentState extends State<PostContent> {
         StoryWidget(),
         Container(
           padding: EdgeInsets.only(top: 10),
-          color: Colors.blueGrey,
+          // color: Colors.blueGrey,
           child: Column(
             children: <Widget>[
               Container(
@@ -30,8 +30,9 @@ class _PostContentState extends State<PostContent> {
                           // margin: EdgeInsets.only(right: 8),
                           padding: EdgeInsets.all(2),
                           decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50.0)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50.0),
+                            ),
                             border: Border.all(
                               color: Colors.blue,
                               width: 3.0,
@@ -71,16 +72,19 @@ class _PostContentState extends State<PostContent> {
                               text: 'User ',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
+                                color: Colors.black,
                               ),
                               children: <TextSpan>[
                                 TextSpan(
                                   text: 'added 4 new photos!',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
+                          SizedBox(height: 3),
                           Row(
                             children: <Widget>[
                               Text(
@@ -89,11 +93,19 @@ class _PostContentState extends State<PostContent> {
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(width: 5),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 5),
+                                width: 5,
+                                height: 5,
+                                decoration: BoxDecoration(
+                                  color: Colors.black38,
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
                               Icon(
                                 Icons.group,
-                                color: Colors.black45,
-                                size: 24,
+                                color: Colors.black38,
+                                size: 18,
                               ),
                             ],
                           ),
