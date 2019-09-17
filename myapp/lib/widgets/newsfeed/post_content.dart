@@ -17,6 +17,7 @@ class _PostContentState extends State<PostContent> {
           padding: EdgeInsets.only(top: 10),
           // color: Colors.blueGrey,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
@@ -123,6 +124,19 @@ class _PostContentState extends State<PostContent> {
                       },
                     ),
                   ],
+                ),
+              ),
+              SizedBox(height: 8),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: RichText(
+                  text: TextSpan(
+                    text: 'asdddd',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
                 ),
               ),
             ],
