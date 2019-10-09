@@ -131,7 +131,7 @@ class _PostContentState extends State<PostContent> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: RichText(
                   text: TextSpan(
-                    text: 'asdddd',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi, possimus eveniet amet laboriosam minus sit cupiditate obcaecati placeat maxime repellendus rerum nobis veritatis incidunt. Perspiciatis distinctio iste consequuntur consectetur ipsa doloribus sequi cupiditate quod, quaerat amet rem ullam labore quis reprehenderit. Ab a tempore voluptatibus ex qui eum tempora.',
                     style: TextStyle(
                       color: Colors.black,
                     ),
